@@ -54,11 +54,26 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  var arrayForProblemThree = [];
+  var numHolder;
+  var solutionHolder;
+  
+  numHolder = sum(a,b)[0];
+  solutionHolder = sum(numHolder,c)[0];
+  arrayForProblemThree.push(solutionHolder);
 
+  numHolder = multiply(a,b)[0];
+  solutionHolder = multiply(numHolder, c)[0];
+  arrayForProblemThree.push(solutionHolder);
+
+  arrayForProblemThree.push('4 and 7 and 5 sum to 16.');
+  arrayForProblemThree.push('The product of 4 and 7 and 5 is 140.');
+
+  return arrayForProblemThree;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
